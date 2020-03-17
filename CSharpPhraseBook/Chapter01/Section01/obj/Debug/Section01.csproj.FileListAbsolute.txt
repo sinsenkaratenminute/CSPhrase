@@ -1,0 +1,7 @@
+C:\Users\admin\Documents\C#コード\C#イディオム\CSharpPhraseBook\Chapter01\Section01\bin\Debug\Section01.exe.config
+C:\Users\admin\Documents\C#コード\C#イディオム\CSharpPhraseBook\Chapter01\Section01\bin\Debug\Section01.exe
+C:\Users\admin\Documents\C#コード\C#イディオム\CSharpPhraseBook\Chapter01\Section01\bin\Debug\Section01.pdb
+C:\Users\admin\Documents\C#コード\C#イディオム\CSharpPhraseBook\Chapter01\Section01\obj\Debug\Section01.csprojAssemblyReference.cache
+C:\Users\admin\Documents\C#コード\C#イディオム\CSharpPhraseBook\Chapter01\Section01\obj\Debug\Section01.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\C#コード\C#イディオム\CSharpPhraseBook\Chapter01\Section01\obj\Debug\Section01.exe
+C:\Users\admin\Documents\C#コード\C#イディオム\CSharpPhraseBook\Chapter01\Section01\obj\Debug\Section01.pdb

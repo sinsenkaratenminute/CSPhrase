@@ -1,0 +1,99 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ch0408 {
+    class Program {
+        static void Main(string[] args) {
+            Sample01();
+            Sample02();
+            //Sample03();
+            Sample04();
+        }
+
+        static void Sample01() {
+            var a = 10;
+            var b = 20;
+            Console.WriteLine("{0} {1}", a, b);
+
+            var temp = a;
+            a = b;
+            b = temp;
+
+            Console.WriteLine("{0} {1}", a, b);
+        }
+
+        static void Sample02() {
+            var str = "123";
+
+            int height;
+            if (int.TryParse(str, out height)) {
+                // heightには変換された値が入っている。
+                Console.WriteLine(height);
+            } else {
+                // 変換に失敗した。
+                Console.WriteLine("変換できません");
+            }
+
+
+            //try {
+            //    int retryCount = int.Parse(str);
+            //    Console.WriteLine(retryCount);
+            //} catch (ArgumentNullException ex) {
+            //    Console.WriteLine("変換できません");
+            //} catch (FormatException ex) {
+            //    Console.WriteLine("変換できません");
+            //}
+
+        }
+
+        static void Sample03() {
+            try {
+                var lines = File.ReadAllLines("sample.txt");
+
+
+            } catch (FileNotFoundException ex) {
+                // 例外情報を使った何らかの処理
+                //……
+                throw;  //　　〈←例外の再スロー〉 
+            }
+
+        }
+
+        static void Sample04() {
+            var filePath = "sample.txt";
+            using (var stream = new StreamReader(filePath)) { //　〈-StreamReaderは、IDisposableインターフェースを実装している 〉
+                var texts = stream.ReadToEnd();
+                // ここで、読み取ったデータの処理
+            }
+
+        }
+    }
+
+
+    class AppVersion {
+        public int Major { get; set; }
+        public int Minor { get; set; }
+        public int Build { get; set; }
+        public int Revision { get; set; }
+
+        public AppVersion(int major, int minor)
+          : this(major, minor, 0, 0) {  //〈-引数4つのコンストラクタを呼び出す 〉
+      }
+
+        public AppVersion(int major, int minor, int revision)
+          : this(major, minor, revision, 0) {// 〈-引数4つのコンストラクタを呼び出す 〉
+      }
+
+        public AppVersion(int major, int minor, int build, int revision) {
+            Major = major;
+            Minor = minor;
+            Build = build;
+            Revision = revision;
+        }
+
+    }
+}
